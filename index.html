@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin's Online Resume</title>
+
+    <!-- CSS and Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript to prevent inspection -->
+    <script>
+    // Disable right-click context menu
+    document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    });
+
+    // Disable common keyboard shortcuts for Developer Tools
+    document.addEventListener("keydown", (e) => {
+        const forbiddenKeys = ["F12", "I", "J", "U"];
+        const ctrlShiftKeys = ["I", "J"];
+        if (
+            forbiddenKeys.includes(e.key) ||
+            (e.ctrlKey && e.shiftKey && ctrlShiftKeys.includes(e.key)) ||
+            (e.ctrlKey && e.key === "U")
+        ) {
+            e.preventDefault();
+        }
+    });
+
+    // Attempt to detect and close Developer Tools
+    const checkDeveloperTools = () => {
+        const devToolsOpened = (() => {
+            try {
+                console.profile(); // Attempt to start a profile
+                console.profileEnd(); // End profile
+                return console.clear(), false; // Clear console, indicating dev tools aren't open
+            } catch (e) {
+                return true; // Exception indicates dev tools are open
+            }
+        })();
+
+        if (devToolsOpened) {
+            alert("Developer Tools are disabled on this page.");
+            window.close(); // Attempt to close the window if developer tools are open
+        }
+    };
+
+    // Check for developer tools every 1 second
+    setInterval(checkDeveloperTools, 1000);
+    </script>
+</head>
+
+<body>
+    <main>
+        
+        <!-- Main Card -->
+        <section class="card">
+            <article>
+
+                 <!-- Profile Image at the Top -->
+                 <section class="profile-image-container">
+                    <div class="profile-flip-card">
+                        <!-- Front side of the flip card -->
+                        <div class="front">
+                            <img src="./AswinGitDp.jpg" alt="Profile Picture" class="profile-image">
+                        </div>
+                        <!-- Back side of the flip card -->
+                        <div class="back">
+                            <img src="./Cartoon Aswin.jpg" alt="Profile Picture" class="profile-image">
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Contact Info -->
+                <section class="inner-card">
+                    <h1>Aswin.V</h1>
+                    <div class="email">
+                        <a href="mailto:e37aswin@gmail.com" class="hover-link email-link">
+                            <i class="fa fa-envelope-o" > </i> e37aswin@gmail.com
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Social Media displayed line-by-line -->
+                <section class="inner-card">
+                    <h2><i class="fa fa-bullhorn" aria-hidden="true"></i> Social Media</h2>
+                    <ul class="social-media">
+                        <br>
+                        <li>
+                            <a href="https://wa.me/919361831669" class="hover-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                        
+
+                        <li>
+                            <a href="https://github.com/winAs-Xprt" class="hover-link">
+                                <i class="fa fa-github"></i> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/aswin-v-7a7686265/" class="hover-link">
+                                <i class="fa fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://aswins-portfolio.netlify.app/" class="hover-link">
+                                <i class="fa fa-globe"></i> Web Site
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/1014_aswin" class="hover-link">
+                                <i class="fa fa-twitter"></i> Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/_.mr._.violence._/" class="hover-link">
+                                <i class="fa fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    
+                </section>
+
+                <!-- Skills with bullet points -->
+                <section class="inner-card">
+                    <h2><i class="fa fa-check" aria-hidden="true"></i> Skills</h2>
+                    <ul class="skills-list">
+                        <li>Full Stack Developer</li>
+                        <li>Web Designer & Development</li>
+                        <li>Ui & Ux Designer</li>
+                        <li>Brand Logo Designing</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Machine Learning Enthusiast</li>
+                    </ul>
+                </section>
+
+                <!-- Experience with bullet points -->
+                <section class="inner-card">
+                    <h2><i class="fa fa-briefcase" aria-hidden="true"></i> Experience</h2><br>
+                    <h3>Dr.MGR Website's And Designing Team Lead </h3>
+                    <ul class="experience-list" style="text-align: justify;" >
+                        <li>Appointed as the Website Developer and Designer Student Club Lead for the first time on my campus. In this 
+                            role, I designed and developed various websites and worked on UI/UX projects, leading a team of students
+                            to create engaging and user-friendly digital experiences.</li>
+                        
+                    </ul>
+
+                    <h3>Australia Internship - <i>(ADC) Ai-Designs  & Concepts</i></h3>
+                    <ul class="experience-list" style="text-align: justify;">
+                        <li>
+                            As a FullStack Web Application Developer at Ai Designs and Concepts, I create stunning and user-friendly interfaces for AI/ML modules. 
+                             My work involves integrating AI and machine learning into visually appealing web applications to ensure a 
+                             seamless user experience. I use my skills in both front-end and back-end development to deliver innovative AI/ML solutions.
+                            <!-- Learn More Link -->
+                         <!--   <a href="https://developers-plaze.netlify.app/" target="_blank" class="hover-link">Learn More</a> -->
+                        </li>
+                    </ul>
+
+                    <h3>Developer's Plaze </h3>
+                    <ul class="experience-list" style="text-align: justify;">
+                        <li>
+                            As the Founder and CEO of a company with over 150+ team members, I lead a diverse group of AI/ML specialists, 
+                            full-stack developers, and designers. My role involves coordinating and overseeing their work to ensure successful 
+                            project completion for our clients. Additionally, I have worked on and successfully completed numerous projects,
+                            delivering quality results on time and within budget. 
+                            <!-- Learn More Link -->
+                            <a href="https://developers-plaze.netlify.app/" target="_blank" class="hover-link">&nbsp;Learn More</a>
+                        </li>
+                    </ul>
+                    
+
+                </section>
+
+                <!-- Internships with bullet points -->
+                <section class="inner-card">
+                    <h2><i class="fa fa-trophy" aria-hidden="true"></i> Awards</h2>
+                    <br>
+                    <h3>1.Best Project & Paper Presentation at<i> Panimalar Engineering College</i></h3>
+                    <ul class="internships-list">
+                        <li>Developed a Python-based Ai Software</li>
+                        <li><b>Named:</b> Mobility For Visually Impaired People.</li>
+                    </ul>
+
+                    
+                    <h3>2.TECHASTRA'23 <i>Hackathon</i></h3>
+                    <ul class="internships-list">
+                        <li>Won the 1st prize</li>
+                        <li>Used Machine Learning techniques</li>
+                    </ul>
+                </section>
+                
+
+                <!-- Projects -->
+                <section class="inner-card">
+                    <h2><i class="fa fa-cubes" aria-hidden="true"></i> Projects</h2><br>
+                    <h3>Full Stack Projects</h3>
+                    <ul>
+                        <li>Customizable-DashBoard (Reactjs)</li><br>
+                        <li>Mobility For Visually Impaired People (python)</li><br>
+                        <li>Online QrCode-Generator (API)</li><br>
+                        <li>Netflix Clone (React-App)</li><br>
+                        <li>My Portfolio website (jquery)</li><br>
+                        <li>Online Course Feedback Analysis Syatem (php, MySql)</li><br>
+                        <li>A Responsive Movie Ticket Booking and OTT Application (Figma)</li><br>
+                        <li>College Symposium Website (Full Stack JavaScript)</li><br>
+                        <li>3D Portfolio (React-WebApp)</li><br>
+                        <li>Git Repository Extractor (Website)</li><br>
+
+                    </ul>
+
+                </section>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

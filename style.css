@@ -1,0 +1,237 @@
+/* Base styling for the body */
+body {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F2F5; /* Light gray for a modern appearance */
+}
+
+/* Main section with flex layout */
+main {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Centered alignment for smaller screens */
+    padding: 20px; /* Overall padding */
+}
+
+/* Outer card styling with responsiveness */
+.card {
+    background-color: rgba(255, 255, 255, 0.7); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blur for glass appearance */
+    border: 1px solid #DADCE0; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding for content */
+    transition: all 0.3s; /* Smooth transitions */
+    width: 100%; /* Full width by default */
+    max-width: 80%; /* Max width for larger screens */
+}
+
+/* Inner card styling */
+.inner-card {
+    background-color: rgba(255, 255, 255, 0.7); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blur for glass appearance */
+    border: 1px solid #DADCE0; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding for content */
+    margin-bottom: 20px; /* Spacing between inner cards */
+    transition: all 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for pop-up animation */
+.inner-card:hover {
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Card lift on hover */
+}
+
+/* Text styling */
+h1, h2, h3 {
+    color: #202124; /* Dark gray for text */
+    margin: 0; /* Consistent margin */
+}
+
+ul {
+    list-style-type: square; /* Square bullet points */
+    padding-left: 1.4em; /* Padding for list items */
+}
+
+a {
+    text-decoration: none;
+    color: #1A73E8; /* Modern blue for links */
+}
+
+a.hover-link:hover {
+    text-decoration: underline;
+    color: #174EA6; /* Darker blue on hover */
+}
+
+/* Specific class for email link to ensure it fits */
+.email-link {
+    font-size: 14px; /* Smaller font size for email to fit within the container */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow if too long */
+    text-overflow: ellipsis; /* Add ellipsis if truncated */
+}
+
+/* Styling for social media */
+.social-media {
+    list-style-type: none; /* No bullet points */
+    padding-left: 0; /* No padding */
+    margin: 0; /* No margin */
+}
+
+/* CSS for the Profile Picture Container */
+.profile-image-container {
+    text-align: center; /* Center the image horizontally */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+/* CSS for the Circular Profile Image */
+.profile-image {
+    border-radius: 50%; /* Make the image circular */
+    width: 150px; /* Set the fixed width for the image */
+    height: 150px; /* Set the fixed height to maintain circular shape */
+    object-fit: cover; /* Ensure the image fits without stretching */
+    border: 2px solid #DADCE0; /* Add a subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 100px; /* Smaller size for smaller screens */
+        height: 100px; /* Maintain circular shape */
+    }
+}
+
+
+/* Social media items displayed in separate lines */
+.social-media li {
+    display: block; /* Display each item on a new line */
+    margin-bottom: 10px; /* Spacing between links */
+}
+
+/* Responsive design for laptop screens */
+@media (min-width: 1024px) {
+    main {
+        flex-direction: row; /* Switch to row layout */
+        justify-content: center; /* Center alignment */
+        gap: 20px; /* Space between cards */
+    }
+
+    .card {
+        flex-basis: 45%; /* Cards take up 45% of the screen */
+        max-width: 400px; /* Limit card width */
+    }
+
+    .inner-card {
+        padding: 25px; /* Increased padding for laptop screens */
+        
+    }
+
+    .card inner-card li {
+       text-align: justify;
+        
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Keep column layout */
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .card {
+        padding: 15px; /* Reduced padding for mobile */
+        max-width: 100%; /* Full-width for smaller screens */
+    }
+
+    .inner-card {
+        padding: 15px; /* Smaller padding for mobile */
+        margin-bottom: 15px; /* Reduced spacing between inner cards */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Smaller font size */
+    }
+
+    h3 {
+        font-size: 1em; /* Consistent font size */
+    }
+
+    ul {
+        padding-left: 1em; /* Reduced padding for list items */
+    }
+}
+/*profile flip*/
+/* CSS for the Profile Picture Container with Flip Effect */
+.profile-image-container {
+    perspective: 1000px; /* Adds depth for the flip effect */
+    text-align: center; /* Center the content */
+    margin-bottom: 20px; /* Add some space below the profile card */
+}
+
+/* CSS for the Flip Card */
+.profile-flip-card {
+    position: relative; /* Position the card relative to its container */
+    width: 150px; /* Set a fixed width for the card */
+    height: 150px; /* Set a fixed height for the card */
+    transform-style: preserve-3d; /* Enable 3D transformation */
+    transition: transform 0.6s; /* Smooth transition for the flip */
+}
+
+/* Flip the card on hover */
+.profile-flip-card:hover {
+    transform: rotateY(180deg); /* Rotate 180 degrees on hover */
+}
+
+/* Front side of the flip card */
+.profile-flip-card .front {
+    position: absolute; /* Absolute positioning for stacking */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    backface-visibility: hidden; /* Hide the back face when flipped */
+}
+
+/* Back side of the flip card */
+.profile-flip-card .back {
+    position: absolute; /* Absolute positioning for stacking */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    backface-visibility: hidden; /* Hide the front face when flipped */
+    transform: rotateY(180deg); /* Reverse the rotation for the back */
+    background-color: #f5f0f4; /* A different background color for contrast */
+    display: flex; /* Flex layout for content alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 50px;
+}
+
+/* Profile Image with Circular Shape */
+.profile-image {
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits without stretching */
+    width: 100%; /* Fill the flip card */
+    height: 100%; /* Maintain circular shape */
+    border: 2px solid #dadce0; /* Add a subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .profile-image-container {
+        perspective: 800px; /* Reduced perspective for smaller screens */
+    }
+
+    .profile-flip-card {
+        width: 100px; /* Smaller size for smaller screens */
+        height: 100px; /* Maintain circular shape */
+    }
+}
